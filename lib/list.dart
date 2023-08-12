@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class MovieList {
   late String title;
@@ -14,3 +13,5 @@ class MovieList {
     // this.img = img;
   }
 }
+
+
