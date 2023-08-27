@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/home.dart';
 import 'package:myapp/view.dart';
+import 'package:myapp/pages/widget/custom_text.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -10,24 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  Widget myText(String label, bool isObsecure) {
-    return Container(
-      margin: EdgeInsets.all(15),
-      child: TextField(
-        obscureText: isObsecure,
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Color.fromARGB(225, 67, 67, 67),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          labelText: label,
-          labelStyle: TextStyle(color: Colors.white, fontSize: 15),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const listPage()),
+                            builder: (context) => const ListPage()),
                       );
                     },
                     child: Text(

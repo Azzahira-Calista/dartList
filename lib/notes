@@ -1,0 +1,15 @@
+August, 27 2023
+
+in view dart ( 
+    - cardnya ganti jadi pake StatefulWidget yg custom card 
+    - kasi jarak card dri start aka pinggir kanan kiri 
+    - text color di elevated buttonnya ganti warna yg terang 
+    - kalo bisa ratingny ga manual 
+    - kalo bisa button morenya bisa dipencet
+)
+
+in login page ( 
+    - text color di dalem text field jadiin putih
+    - tambahin text welcome diatas
+    - kalo bisa tambahin stack index 0 buat backgroun TextField
+)
