@@ -81,6 +81,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:myapp/list.dart';
+import 'login.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -118,6 +119,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => LoginPage()), // Navigate to LoginPage
+            );
+          },
+        ),
         title: Text("Movie List App"),
         backgroundColor: const Color.fromARGB(221, 105, 104, 104),
       ),
@@ -133,7 +147,8 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 elevation: 4,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(11),),
+                  borderRadius: BorderRadius.circular(11),
+                ),
                 child: ListTile(
                   trailing: Icon(Icons.favorite, color: Colors.red),
                   leading: Image.asset(
